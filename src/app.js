@@ -15,17 +15,10 @@ loginForm.onsubmit = (e) => {
   } else if (Validation.email(email) == "false") {
     alertDid.innerHTML = Alert.warning("Wrong email address");
   } else if (Validation.number(age) == "false") {
- 
     alertDid.innerHTML = Alert.warning("Wrong age value");
-  }
-  else{
-    alertDid.innerHTML=Alert.success("successfully sign up")
-    LocalStorage.save('loginUser',userData)
+  } else {
+    alertDid.innerHTML = Alert.success("successfully sign up");
+    LocalStorage.save("loginUser", userData);
+    e.target.reset()
   }
 };
-
-
-
-
-
-
