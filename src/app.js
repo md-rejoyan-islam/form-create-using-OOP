@@ -19,6 +19,6 @@ loginForm.onsubmit = (e) => {
   } else {
     alertDid.innerHTML = Alert.success("successfully sign up");
     LocalStorage.save("loginUser", userData);
-    e.target.reset()
+    e.target.reset();
   }
 };
